@@ -1,71 +1,82 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url("./theme.css");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
 }
-
+  
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  /* text-align: center; */
-}
-
-ul {
-  list-style: none;
-}
-
-ul li {
-  padding: 5px;
-  background: #f4f4f4;
-  margin: 5px 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: var(--backgroundColor);
+      height: 100vh;
+      overflow-y: auto;
 }
 
 header {
-  background: #cc4f4f;
-  padding: 1rem;
+      background: var(--headerBackgroundColor);
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      position: sticky;
+      top: 0;
+}
+
+header img {
+  width: 60px;
+  height: 30px;
+}
+
+header h1 {
+  color: var(--headingColor);
+  /* font-style: italic; */
+}
+
+header a {
+  text-decoration: none;
+  color: var(--headingColor);
+}
+
+header button {
+  border: none;
+  background-color: grey;
+  border-radius: 8px;
+  width: 80px;
+  height: 20px;
+  color: #fff;
+}
+
+h1 {
   text-align: center;
 }
 
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 80vh;
+  padding: 20px;
+  background-image: url('./components/images/pwc_bootcamp.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+    list-style: none;
+}
+  
+ul li {
+    padding: 5px;
+    background: #f4f4f4;
+    margin: 5px 0;
+}
+
+/* styling of the gallery */
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -84,68 +95,214 @@ header {
   height: 150px;
 }
 
+.contactUs {
+  text-align: center;
+  margin: 20px;
+  color: var(--headingColor);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+  color: var(--headingColor);
+  font-size: 18px;
+}
+
+
+.aboutUs {
+  margin: 20px;
+  width: 100%;
+  color: black;
+  text-align: justify;
+  padding: 10px;
+  line-height: 1.5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./components/images/pwc_aboutUs.jpg");
+  height: 550px;
+}
+
+.about {
+  width: 50%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: auto;
+}
+
+.grid-item {
+  /* width: 300px;
+  height: 300px;
+  object-fit: cover; */
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
 .container {
-  margin: auto;
-  width: 500px;
-  overflow: auto;
-  padding: 3rem 2rem;
-}
-
+    margin: auto;
+    width: 500px;
+    overflow: auto;
+    padding: 3rem 2rem;
+  }
+  
 #my-form {
-  padding: 2rem;
-  background: #f4f4f4;
-}
-
+    padding: 2rem;
+    background: #f4f4f4;
+  }
+  
 #my-form label {
-  display: block;
-}
-
+    display: block;
+  }
+  
 #my-form input[type='text'] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.link {
-  text-decoration: none;
-}
-
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
 .btn {
-  display: block;
-  width: 100%;
-  padding: 10px 15px;
-  border: 0;
-  background: #333;
-  color: #fff;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+  
+  .btn:hover {
+    background: #444;
+  }
+  
+  .bg-dark {
+    background: #333;
+    color: #fff;
+  }
+  
+  .error {
+    background: orangered;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+}
+
+.applicants-table {
+  margin: 8px;
+  background-color: #ccc;
+  gap: 8px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px #000;
+  border: 2px #fff;
   border-radius: 5px;
-  margin: 5px 0;
+
 }
 
-.btn:hover {
-  background: #444;
+tr {
+  gap: 8px;
+  margin: 8px;
+  padding: 8px;
+
 }
 
-.bg-dark {
-  background: #333;
-  color: #fff;
+th {
+  padding: 10px;
+
 }
 
-.error {
-  background: orangered;
-  color: #fff;
-  padding: 5px;
-  margin: 5px;
+td {
+  gap: 8px;
+  margin: 10px;
+  padding: 8px;
+  border-bottom: 1px black
+}
+
+td li {
+  background-color: transparent;
+}
+
+thead tr {
+  border: 2px solid black !important;
 }
 
 footer {
-  background: #cc4f4f;
+      background: var(--headerBackgroundColor);
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      color: var(--headingColor)
+}
+
+.footerApp {
+  background: var(--headerBackgroundColor);
   padding: 10px;
   text-align: center;
   display: flex;
+  align-items: right;
   justify-content: space-evenly;
-  width: 100%;
-  bottom: 0;
   position: fixed;
+  width: 100%;
+  color: var(--headingColor)
+}
+
+.applicants-table {
+  margin: 8px;
+  background-color: #ccc;
+  gap: 8px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px #000;
+  border: 2px #fff;
+  border-radius: 5px;
+  margin: auto;
+}
+
+tr {
+  gap: 8px;
+  margin: 8px;
+  padding: 8px;
+
+}
+
+th {
+  padding: 10px;
+
+}
+
+td {
+  gap: 8px;
+  margin: 10px;
+  padding: 8px;
+  border-bottom: 1px black
+}
+
+td li {
+  background-color: transparent;
+}
+
+thead tr {
+  border: 2px solid black !important;
+}
+
+.main {
+  padding: 50px;
+}
+
+.hide {
+  display: none;
 }
