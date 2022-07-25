@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,117 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  /* text-align: center; */
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding: 5px;
+  background: #f4f4f4;
+  margin: 5px 0;
+}
+
+header {
+  background: #cc4f4f;
+  padding: 1rem;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: auto;
+}
+
+.grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: auto;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-item img {
+  width: 300px;
+  height: 150px;
+}
+
+.container {
+  margin: auto;
+  width: 500px;
+  overflow: auto;
+  padding: 3rem 2rem;
+}
+
+#my-form {
+  padding: 2rem;
+  background: #f4f4f4;
+}
+
+#my-form label {
+  display: block;
+}
+
+#my-form input[type='text'] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.btn:hover {
+  background: #444;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.error {
+  background: orangered;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+}
+
+footer {
+  background: #cc4f4f;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
 }

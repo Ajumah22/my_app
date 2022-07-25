@@ -1,0 +1,9 @@
+.cardDetails {
+    background-color: dodgerblue;
+    border: 1px solid #000;
+    color: white;
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
